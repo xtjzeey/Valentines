@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Valentine ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hearts-bg" id="hbg"></div>
+<button class="nav-btn back-btn" id="backBtn" style="display:none" onclick="goBack()">← Back</button>
+<button class="nav-btn surprise-btn" id="surpriseBtn" style="display:none" onclick="goSurprise()">✨ Surprise!</button>
+
+<div class="fs-overlay" id="fsOverlay">
+    <video id="fsVideo" controls></video>
+    <button class="close-fs" onclick="closeFs()">✕</button>
+</div>
+
+<div class="page active" id="p1">
+    <div class="message">Hey, will you be my Valentine? 💌</div>
+    <div class="envelope-container">
+        <div class="envelope" id="envelope">
+            <div class="envelope-top"></div>
+            <div class="envelope-body"><span style="font-size:16px;font-weight:600;color:#590d22">Open me! 🥰</span></div>
+            <div class="css-heart" id="cssHeart" onclick="heartClicked()"></div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="btn btn-yes" id="yesBtn" onclick="sayYes()">YES! Absolutely ❤️</button>
+        <button class="btn btn-no" id="noBtn" onclick="sayNo()">Hmm... Maybe? 😅</button>
+    </div>
+    <div class="instruction" id="inst">Click the heart, Mrs. Valentine 💝</div>
+</div>
+
+<div class="page" id="p2">
+    <div class="message">Yay! You said yes! 🎉<br>Choose your Valentine's gift:</div>
+    <div class="gift-container" id="giftGrid">
+        <div class="gift-card" onclick="selectGift(1)"><div class="gift-title">Love Letter ✍️</div><p>A heartfelt message just for you</p></div>
+        <div class="gift-card" onclick="selectGift(2)"><div class="gift-title">Digital Bouquet 💐</div><p>Beautiful flowers that never wilt</p></div>
+        <div class="gift-card" onclick="selectGift(3)"><div class="gift-title">Romantic Memory 🎞️</div><p>A special moment captured forever</p></div>
+    </div>
+</div>
+
+<div class="page" id="p3" style="justify-content:flex-start;padding-top:80px">
+    <div class="paper-container">
+        <div class="side-decoration" style="top:10%;left:3%">💖</div>
+        <div class="side-decoration" style="bottom:10%;right:3%">✨</div>
+        <div class="side-decoration" style="top:25%;right:8%">🥰</div>
+        <div class="side-decoration" style="bottom:25%;left:8%">💕</div>
+        <div class="paper">
+            <div class="paper-lines"></div>
+            <div class="letter-content" id="letterContent">
+                To the light of my life,<br><br>
+                From the moment our paths crossed, you've brought colors to my world that I never knew existed. Your smile is my favorite sunrise, your laugh my most cherished melody.<br><br>
+                Every day with you is a page from the most beautiful story ever written—one I hope we continue writing together forever. You are my home, my peace, and my greatest adventure.<br><br>
+                Happy Valentine's Day to the one who makes every day feel like a celebration of love. I cherish you more than words could ever express.<br><br>
+                Forever yours,<br>Your Valentine 💝
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page" id="p4" style="justify-content:flex-start;padding-top:80px">
+    <div class="message">For the perfect girl </div>
+    <div class="upload-wrapper">
+        
+        <img src="Flower Smells Good.gif" alt="Digital Bouquet" style="width:100%; max-width:600px; border-radius:20px; box-shadow:0 15px 35px rgba(255,77,109,.2); display:block;">
+        
+        <div class="sticky-notes" id="stickyNotes">
+            <div class="note">You make my heart bloom every single day 💕</div>
+            <div class="note">To endless smiles and forever with you ✨</div>
+            <div class="note">My love for you grows stronger each moment 🌱</div>
+            <div class="note">You are my favorite thought every morning 🌅</div>
+        </div>
+    </div>
+</div>
+
+<div class="page" id="p5" style="justify-content:flex-start;padding-top:80px">
+    <div class="message"> Remember this Memory 🎞️</div>
+    <div class="upload-wrapper">
+        
+        <video id="vidPreview" src="memory.mp4" controls playsinline style="width:100%; max-width:700px; border-radius:20px; box-shadow:0 15px 35px rgba(255,77,109,.2); background:#000; display:block;"></video>
+        
+        <div class="video-ctrls" id="vidCtrls" style="display:flex;">
+            <button class="fs" onclick="openFs()">⛶ Fullscreen</button>
+        </div>
+    </div>
+</div>
+
+<div class="page" id="p6">
+    <div class="message">One more surprise for you! 🎁</div>
+    <div class="final-gift">
+        <div class="surprise-msg">Scan this code below</div>
+        <div class="qr-box">
+            <div class="arrow-icon" style="top:-35px;left:50%;transform:translateX(-50%)">⬇️</div>
+            
+            <img src="frame3.png" alt="Spotify Code" style="width: 250px; border-radius: 10px;">
+            
+            <div class="arrow-icon" style="bottom:-35px;left:50%;transform:translateX(-50%)">⬆️</div>
+        </div>
+    </div>
+    <div style="margin-top:25px;font-size:17px;color:#800f2f">Thank you for being my Valentine! I love you endlessly 💝</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
